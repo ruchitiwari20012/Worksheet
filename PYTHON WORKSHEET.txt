@@ -1,0 +1,61 @@
+Q1  :- B
+Q2  :- C
+Q3  :- A
+Q4  :- A
+Q5  :- C
+Q6  :- C
+Q7  :- A
+Q8  :- B
+Q9  :- A,B and D
+Q10 :- A,C and D
+
+Q11 :- Differentiate between a list, tuple, set and dictionary.
+ANSWER-
+Lists and Tuple Difference 
+•List is a collection which is ordered. Whereas the tuple are collection of items which is also ordered.
+•Lists are mutable (changeable) , Where as tuples are immutable(unchangeable)
+•List are represented by this : [] , tuple are represented by : ()
+•Tuples are faster than lists as they are immutable
+•Lists are like arrays declared in other languages.
+
+Sets
+•Collection of Unordered and Unindexed items.
+•Sets are mutable (changeable).
+•Does not take duplicate Values.
+•Sets are unordered, so you cannot be sure in which order the items will appear.
+•Sets are represented by : { }.
+•Sets are not faster than lists however they have a upper hand when it comes to membership testing.
+
+Dictionaries
+•Key: Value Pair in Python
+•A dictionary is a collection which is unordered, changeable and indexed.
+•In Python dictionaries are written with curly brackets, and they have keys and values.
+•Dictionaries represent by: {}.
+
+Q 12. Are strings mutable in python? Suppose you have a string “I+Love+Python”,
+ write a small code to replace ‘+’with space in python.?
+ANSWER-
+No string is not mutable In python, the string data types are immutable. Which means a string value cannot be
+updated. We can verify this by trying to update a part of the string which will led us to an error.
+In simple words, an immutable object can’t be changed after it is created
+
+Code - 
+input :- string="I+LOVE+PYTHON"
+input :- print(string.replace("+"," "))
+output :- I LOVE PYTHON
+
+
+Q 13. What does the function ord() do in python? Explain with example. Also, write down the function for getting
+ the datatype of a variable in python?
+ANSWER 
+The ord() function returns the number representing the unicode code of a specified character
+Python ord() function with examples - 
+The ord() function in Python accepts a string of length 1 as an argument and returns the unicode code point 
+representation of the passed argument. For example ord('B') returns 66 which is a unicode code point value of 
+character 'B'.
+ord('9') return 57
+Python ord() and chr() are built-in functions. They are used to convert a character to an int and vice versa.
+
+ 
+14 and 15 are in jupyter notebook
+

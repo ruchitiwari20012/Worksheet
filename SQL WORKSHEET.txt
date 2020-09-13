@@ -1,0 +1,107 @@
+Q1 :-  A and D
+Q2 :-  B,C and A
+Q3 :-  B
+Q4 :-  B
+Q5 :-  A
+Q6 :-  C
+Q7 :-  B
+Q8 :-  B
+Q9 :-  B
+Q10 :- C
+
+Q-11 What is data-warehouse?
+
+A data warehouse is a large collection of business data used to help an organization make decisions. The concept of
+the data warehouse has existed since the 1980s, when it was developed to help transition data from merely powering 
+operations to fueling decision support systems that reveal business intelligence. The large amount of data in data 
+warehouses comes from different places such as internal applications such as marketing, sales, and finance;
+customer-facing apps; and external partner systems, among others.
+
+On a technical level, a data warehouse periodically pulls data from those apps and systems then, the data goes through 
+formatting and import processes to match the data already in the warehouse.The data warehouse stores this processed data
+so it’s ready for decision makers to access.How frequently data pulls occur, or how data is formatted, etc.Will vary
+depending on the needs of the organization.
+
+A data warehouses provides us generalized and consolidated data in multidimensional view. Along with generalized and 
+consolidated view of data, a data warehouses also provides us Online Analytical Processing (OLAP) tools. These tools help
+us in interactive and effective analysis of data in a multidimensional space. This analysis results in data generalization 
+and data mining.
+
+In other way we can say that a data warehouse is a database, which is kept separate from the organizations operational
+database.There is no frequent updating done in a data warehouse. It possesses consolidated historical data, which helps 
+the organization to analyze its business. A data warehouse helps executives to organize, understand, and use their data 
+to take strategic decisions.Data warehouse systems help in the integration of diversity of application systems.A data
+warehouse system helps in consolidated historical data analysis.
+
+
+Q-12 What is the difference between OLTP VS OLAP?
+
+OLTP and OLAP: The two terms look similar but refer to different kinds of systems.
+Online transaction processing (OLTP) captures, stores, and processes data from transactions in real time. 
+Online analytical processing (OLAP) uses complex queries to analyze aggregated historical data from OLTP systems.
+
+OLAP (ONLINE ANALYTICAL PROCESSING)	                         OLTP (ONLINE TRANSACTION PROCESSING)
+1) Consists of historical data from various Databases.	         1) Consists only operational current data.
+
+2) It is subject oriented.Used for Data Mining,                  2) It is application oriented.Used for business tasks
+   Analytics, Decision making,etc.	
+                                 
+3) The data is used in planning,problem solving                  3) The data is used to perform day to day fundamental operations.
+   and decision making.                                                
+	 
+4) It reveals a snapshot of present business tasks.	         4) It provides a multi-dimensional view of different business tasks.
+
+5) Large amount of data is stored typically in TB,PB	         5) The size of the data is relatively small as the historical data 
+                                                                    is archived. For ex MB, GB
+6) Relatively slow as the amount of data involved is             6) Very Fast as the queries operate on 5% of the data.
+   large. Queries may take hours.	
+                       
+7) It only need backup from time to time as compared             7) Backup and recovery process is maintained religiously.
+   to OLTP.	
+
+8) Only read and rarely write operation.	                 8)Both read and write operations.
+
+
+Q-13 What are the various characteristics of data-warehouse?
+
+Data Warehouse is designed with four characteristics.They are :-
+1. Time variant.
+2. Non Volatile.
+3. Integrated.
+4. Subject Oriented.
+
+Lets see that characteristics in detail :-
+Time Variant :- A Data Warehouse is a time variant data base, which supports the business management in analysing the
+business and comparing the business with different time periods like Year, Quarter, Month, Week and Date
+ 
+Non Volatile :- It is non volatile Database, once the data entered into the database, it does not reflects to the change
+which takes place at operational database. Hence the data is statics in Data Warehouse.
+* It generates artificially keys or surrogate keys to store the history.
+* A surrogate key generated serious of numbers.
+* It requires more disk space.
+
+Integrated Database :- It is a integrated database, which allows you to collect the data and integrate the data with 
+multiple database sources
+
+Subject Oriented :- Data warehouse is a subject oriented database, which supports the business need of individual 
+department specific user.
+Example : Sales, HR, Accounts, Marketing etc.
+
+Q-14 What is Star-Schema?
+
+A Star Schema is a schema Architectural structure used for creation and implementation of the Data Warehouse systems,
+where there is only one fact table and multiple dimension tables connected to it. It is structured like a star in shape 
+of appearance.This is one of the efficient data warehouse schema types, which can use simple querying for accessing the
+data from the system, in order to derive logical contents for analytical and report generation purposes.
+
+The star schema is a necessary case of the snowflake schema. It is also efficient for handling basic queries.
+It is said to be star as its physical model resembles to the star shape having a fact table at its center and
+the dimension tables at its peripheral representing the star’s points.
+
+Q-15 What do you mean by SETL?
+
+Short for Set Theory as a Language (or Set Language), SETL is a high-level programming language that's based on 
+the mathematical theory of sets. It was developed in the early 1970's by mathematician Professor J. Schwartz. 
+SETL is an interpreted language with a syntax that is resembles C and in many cases similar to Perl. 
+In SETL every statement is terminated by a semicolon. Variable names are case-insensitive and are automatically 
+determined by their last assignment.
