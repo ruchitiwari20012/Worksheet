@@ -1,0 +1,126 @@
+1. Write SQL query to create table Customers.
+mysql> create table customer (
+    -> customerNumber char (10) primary key
+    -> customerName char (20),
+    -> contactLastName char (20),
+    -> contactFirstName char (20),
+    -> phone varchar (10),
+    -> addressLine1 char (40),
+    -> addressLine2 char (40),
+    -> city char (20),
+    -> state char (20),
+    -> postalCode char (10),
+    -> country char (20),
+    -> salesRepEmployeeNumber varchar (10),
+    -> creditLimit int);
+
+
+2. Write SQL query to create table Orders. 
+
+create table orders (
+ orderNumber varchar (10) primary key,
+ orderDate date,
+ requiredDate date,
+ shippedDate date,
+ status char (20),
+ comments char (40),
+ customerNumber char (10),
+ Foreign Key (customerNumber) references customer(customerNumber)
+ );
+
+
+3. Write SQL query to show all the columns data from the Orders Table.
+mysql> desc orders;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| orderNumber    | varchar(10) | NO   | PRI | NULL    |       |
+| orderDate      | date        | YES  |     | NULL    |       |
+| requiredDate   | date        | YES  |     | NULL    |       |
+| shippedDate    | date        | YES  |     | NULL    |       |
+| status         | char(20)    | YES  |     | NULL    |       |
+| comments       | char(40)    | YES  |     | NULL    |       |
+| customerNumber | char(10)    | YES  | MUL | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+7 rows in set (0.01 sec)
+
+
+mysql> select * from orders;
+Empty set (0.10 sec)
+
+4. Write SQL query to show all the comments from the Orders Table.
+mysql> select comments from orders;
+Empty set (0.00 sec)
+
+
+5.Write a SQL query to show orderDate and Total number of orders placed on that date, from Orders table.
+
+Select COUNT(OrderNumber),OrderDate from Orders Group By OrderDate;
+
+
+6. Write a SQL query to show employeNumber, lastName, firstName of all the employees from employees table.
+
+select employeeNumber,lastName,firstName from employees;
+
+
+7. Write a SQL query to show all orderNumber, customerName of the person who placed the respective order.
+
+ select orders.orderNumber,customer.customerNumber from orders
+ LEFT JOIN customer on orders.customerNumber = customer.customernumber;
+
+8. Write a SQL query to show name of all the customers in one column and salerepemployee name in another column.
+
+SELECT A.customerName CONCAT( B.firstName , ' ' , B.lastName ) as 'Sales Employee Name'
+FROM customer AS A
+INNER JOIN employees AS B
+ON A.salesRepEmployeeNumber = B.employeeNumber;
+
+9. Write a SQL query to show Date in one column and total payment amount of the payments made on that date from the payments table.
+
+Select paymentDate,SUM(amount) from payments group by paymentDate;
+
+
+10. Write a SQL query to show all the products productName, MSRP, productDescription from the products table.
+
+Select ProductCode,ProductName,ProductDescription,MSRP from Products;
+
+11. Write a SQL query to print the productName, productDescription of the most ordered product.
+
+SELECT A.productCode, A.name, SUM(B.quantityOrdered) AS quantity
+FROM Orders AS B
+    INNER JOIN Products AS A
+    ON B.productCode = A.productCode
+GROUP BY B.productCode
+ORDER BY SUM(B.quantityOrdered) DESC LIMIT1
+
+12. Write a SQL query to print the city name where maximum number of orders were placed.
+
+select A.city, COUNT( b.orderNumber) From orders as B
+				     INNER JOIN Customers as A
+				     on B.CustomerNumber = A.CustomerNumber
+				     Group by A.City
+				     Order by COUNT( b.orderNumber) DESC LIMIT 1;
+
+13. Write a SQL query to get the name of the state having maximum number of customers.
+
+SELECT city , COUNT(CustomerNumber) 
+FROM customers
+GROUP BY city
+ORDER BY 2 DESC LIMIT 1;
+
+14. Write a SQL query to print the employee number in one column and Full name of the employee in the second column for all the employees.
+
+select employeeNumber CONCAT(FirstName,' ' ,LastName) as Full Name from Employees;
+
+15. Write a SQL query to print the orderNumber, customer Name and total amount paid by the customer for that order (quantityOrdered × priceEach).
+
+Select B.ordernumber ,(A.quantityOrdered * A.priceEach) AS "Total Amount" , 
+       C.Name AS "Customer Name"
+FROM orders AS B
+INNER JOIN orderdetails AS A 
+ON B.orderNumber = A.ordernumber
+INNER JOIN customers as C
+ON B.customerNumber = C.customerNumber; 
+ 
+
+
