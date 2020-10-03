@@ -1,0 +1,64 @@
+Q1  :- C
+Q2  :- A
+Q3  :- C
+Q4  :- A
+Q5  :- B
+Q6  :- A,D
+Q7  :- A,D
+Q8  :- A,C
+Q9  :- A,B
+Q10 :- Explain how does the adjusted R-squared penalize the presence of unnecessary predictors in the model?
+
+The adjusted R2 will penalize you for adding independent variables (K in the equation) that do not fit the model.
+The adjusted R2 will compensate for this by that penalizing you for those extra variables. While values are usually 
+positive, they can be negative as well.
+In regression analysis, it can be tempting to add more variables to the data as you think of them. Some of those 
+variables will be significant, but you can’t be sure that significance is just by chance. 
+
+
+Q11 :- Differentiate between Ridge and Lasso Regression.
+
+The key difference between these two is the penalty term. Ridge regression adds “squared magnitude” of 
+coefficient as penalty term to the loss function.Lasso Regression (Least Absolute Shrinkage and Selection Operator)
+adds “absolute value of magnitude” of coefficient as penalty term to the loss function.
+
+
+Q12 :- What is VIF? What is the suitable value of a VIF for a feature to be included in a regression modelling?
+
+Variance inflation factor (VIF) is a measure of the amount of multicollinearity in a set of multiple regression 
+variables. Mathematically, the VIF for a regression model variable is equal to the ratio of the overall model 
+variance to the variance of a model that includes only that single independent variable. This ratio is calculated
+for each independent variable. A high VIF indicates that the associated independent variable is highly collinear
+with the other variables in the model,we can use to determine whether our VIFs are in an acceptable range.
+A rule of thumb commonly used in practice is if a VIF is > 10, you have high multicollinearity. In our case,
+with values around 1, we are in good shape, and can proceed with our regression
+
+
+Q13 :- Why do we need to scale the data before feeding it to the train the model?
+
+Regression Coefficients are directly influenced by scale of Features.Some of the Algorithms would reduce time of 
+execution, if scaled.Features with higher scale dominates over lower scale features.Gradient Descent can be 
+achieved easily if we have scaled values.Some Algorithms are based on Euclidean Distances, Euclidean distances 
+are very sensitive to the feature scales. so thats why the scaling is needed before feeding it to the train the 
+model.
+
+
+Q14 :- What are the different metrics which are used to check the goodness of fit in linear regression?
+
+A goodness-of-fit in general, refers to measuring how well do the observed data correspond to the fitted (assumed) model.
+Three statistics are used in Ordinary Least Squares (OLS) regression to evaluate model fit: R-squared, the overall F-test
+and the Root Mean Square Error (RMSE). All three are based on two sums of squares: Sum of Squares Total (SST) and Sum of 
+Squares Error (SSE).
+
+
+Q15 :- From the following confusion matrix calculate sensitivity, specificity, precision, recall and accuracy.
+solution :- 
+Sensitivity = TP/TP+TN = 1000/1000+50 = 0.95
+
+Specificity = TN/FP+TN = 1200/250=1200 = 0.82
+
+Recall = 0.95
+
+Precision = 1000/1250 = 0.80
+
+Accuracy = TP+TN/TP+TN+FP+FN =.88

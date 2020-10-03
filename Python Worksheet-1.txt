@@ -1,0 +1,11 @@
+Q1  :- C
+Q2  :- B
+Q3  :- C
+Q4  :- A
+Q5  :- 6 In python "|" is a bitwise operator Binary of 6 is 110 and binary of 2 is 010 so the "|" operator the answer 
+       should be 110 which is 6 but not in choice.
+Q6  :- C
+Q7  :- A
+Q8  :- C
+Q9  :- A,B,C
+Q10 :- A,B
