@@ -1,0 +1,78 @@
+Q1  :- A
+Q2  :- C
+Q3  :- A
+Q4  :- A
+Q5  :- A
+Q6  :- C
+Q7  :- B
+Q8  :- B 
+Q9  :- Suppose we have a dataset which have two classes A and B. The percentage of class A is 40% and 
+       percentage of class B is 60%. Calculate the Gini index and entropy of the dataset.
+
+Entropy - ****Log are of Base 2**** 
+
+(-1)* [ 60/100 log2(60/100) + 40/100 *log2(40/100)]
+
+(-1)*[ -0.444 - 0.53 ]
+
+= 0.97 ****Entropy should me near to 1 and Less then 1
+
+Gini Index 
+==========
+1 - [ (60/100)^2 + (40/100)^2 ]
+
+1 - [ 0.36 + 0.16 ]
+
+1 - 0.52
+
+= 0.48
+
+
+
+Q10 :- What are the advantages of Random Forests over Decision Tree?
+
+Random forests are a strong modeling technique and much more robust than a single decision tree.
+They aggregate many decision trees to limit overfitting as well as error due to bias and therefore
+yield useful results.
+
+Q11 :- What is the need of scaling all numerical features in a dataset? Name any two techniques used for scaling.
+
+Dataset contains features that highly vary in magnitudes, units and range. Normalisation should be performed 
+when the scale of a feature is irrelevant or misleading and not should Normalise when the scale is meaningful.
+
+The most common techniques of feature scaling are Normalization and Standardization.
+
+Q12 :- Write down some advantages which scaling provides in optimization using gradient descent algorithm
+
+The min-max scaling provides in optimization using in gradient descent algorithm
+
+•We can use fixed learning rate during training without worrying about learning rate decay.
+
+•It has straight trajectory towards the minimum and it is guaranteed to converge in theory to the global
+ minimum if the loss function is convex and to a local minimum if the loss function is not convex.
+
+•It has unbiased estimate of gradients. The more the examples, the lower the standard error.
+
+Q13 :- In case of a highly imbalanced dataset for a classification problem, is accuracy a good metric to 
+       measure the performance of the model. If not, why?
+
+Accuracy, the proportion of correct classifications among all classifications, is very simple and very 
+"intuitive" measure, yet it may be a poor measure for imbalanced data. When the class distribution is 
+slightly skewed, accuracy can still be a useful metric. When the skew in the class distributions are 
+severe, accuracy can become an unreliable measure of model performance. The reason for this unreliability
+is centered around the average machine learning practitioner and the intuitions for classification accuracy.
+
+Q14 :- What is “f-score" metric? Write its mathematical formula
+
+F1 score is a measure of a test's accuracy. It is calculated from the precision and recall of the test, 
+where the precision is the number of correctly identified positive results divided by the number of all
+positive results, including those not identified correctly, and the recall is the number of correctly 
+identified positive results divided by the number of all samples that should have been identified as 
+positive.
+
+Q15 :- What is the difference between fit(), transform() and fit_transform()?
+
+The fit() function calculates the values of these parameters. While The transform() function applies
+for the values of the parameters on the actual data and gives the normalized value. And on the other 
+hand the fit_transform() function performs both in the same step.The same value is got whether we 
+perform in 2 steps or in a single step.
