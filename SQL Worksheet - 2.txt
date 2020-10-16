@@ -1,0 +1,15 @@
+Q1 :- D
+Q2 :- C
+Q3 :- A
+Q4 :- A
+Q5 :- B
+Q6 :- C
+Q7 :- A
+Q8 :- C
+Q9 :- D
+Q10:- D
+Q11:- B
+Q12:- C
+Q13:- A
+Q14:- B AND C
+Q15:- A AND C
