@@ -1,0 +1,86 @@
+Q1 :-C
+Q2 :-A
+Q3 :-B
+Q4 :-A
+Q5 :-D
+Q6 :-C
+Q7 :-C
+Q8 :-A
+Q9 :-C
+Q10:-C
+
+Q11:-. In which situation One-hot encoding must be avoided? Which encoding technique can be used in such a case? 
+
+One-Hot Encoding results in a Dummy Variable Trap as the outcome of one variable can easily be predicted with 
+the help of the remaining variables.The Dummy Variable Trap leads to the problem known as multicollinearity.
+Multicollinearity occurs where there is a dependency between the independent features. Multicollinearity is
+a serious issue in machine learning models like Linear Regression and Logistic Regression.
+
+So, in order to overcome the problem of multicollinearity, one of the dummy variables has to be dropped. Here 
+So That’s why we avoid One-hot encoding.
+
+We use Label Encoding Techniques in that case when:
+1.The categorical feature is ordinal (like Jr. kg, Sr. kg, Primary school, high school).
+2.The number of categories is quite large as one-hot encoding can lead to high memory consumption.
+
+Q12:- In case of data imbalance problem in classification, what techniques can be used to balance the dataset?
+ Explain them briefly.
+
+Two approaches to make a balanced dataset out of an imbalanced one are under-sampling and over-sampling.
+Over sampling and under sampling are techniques used in data mining and data analytics to modify unequal data
+classes to create balanced datasets.Over sampling and under sampling are also known as resampling.One area
+where over sampling and under sampling techniques are used is for survey research. A survey sample population
+may be unbalanced in terms of types of participants, which can deter the larger population that the survey is
+meant to study. By using over or under sampling, the ratios of surveyed characteristics, such as gender, age 
+group and ethnicity, can used to make the weight of the data better representative of the group’s ratios within
+the greater populations.In both over sampling and under sampling, simple data duplication is rarely suggested.
+Generally, over sampling is preferable as under sampling can result in the loss of important data. Under 
+sampling is suggested when the amount of data collected is larger than ideal and can help data mining tools 
+to stay within the limits of what they can effectively process
+
+Q13:- What is the difference between SMOTE and ADASYN sampling techniques? 
+
+The key difference between ADASYN and SMOTE is that the former uses a density distribution, as a criterion to 
+automatically decide the number of synthetic samples that must be generated for each minority sample by 
+adaptively changing the weights of the different minority samples to compensate for the skewed.
+
+Q14:- What is the purpose of using GridsearchCV? Is it preferable to use in case of large datasets? Why or why
+ not? 
+
+GridSearchCV is a library function that is a member of sklearn's model_selection package. It helps to loop
+through predefined hyperparameters and fit your estimator (model) on your training set. So, in the end, 
+you can select the best parameters from the listed hyperparameters.Grid search is a model hyperparameter 
+optimization technique.In scikit-learn this technique is provided in the GridSearchCV class.
+When constructing this class you must provide a dictionary of hyperparameters to evaluate in the param_grid 
+argument. That is a map of the model parameter name and an array of values to try.By default, accuracy is the
+score that is optimized, but other scores can be specified in the score argument of the GridSearchCV constructor.
+By default, the grid search will only use one thread. By setting the n_jobs argument in the GridSearchCV 
+constructor to -1, the process will use all cores on your machine. Depending on your Keras backend, this may
+interfere with the main neural network training process.
+The GridSearchCV process will then construct and evaluate one model for each combination of parameters. 
+Cross validation is used to evaluate each individual model and the default of 3-fold cross validation is used,
+although this can be overridden by specifying the cv argument to the GridSearchCV constructor.
+
+Q15:- List down some of the evaluation metric used to evaluate a regression model. Explain each of them in brief. 
+
+The various metrics used to evaluate the results of the prediction are : 
+Mean Squared Error(MSE) 
+Root-Mean-Squared-Error(RMSE).
+Mean-Absolute-Error(MAE).
+
+The mean squared error tells you how close a regression line is to a set of points. It does this by taking the
+distances from the points to the regression line (these distances are the “errors”) and squaring them. The 
+squaring is necessary to remove any negative signs. It also gives more weight to larger differences. It’s called
+the mean squared error as you’re finding the average of a set of errors.
+
+Root Mean Square Error (RMSE) is the standard deviation of the residuals (prediction errors). Residuals are a 
+measure of how far from the regression line data points are; RMSE is a measure of how spread out these residuals 
+are. In other words, it tells you how concentrated the data is around the line of best fit. Root mean square 
+error is commonly used in climatology, forecasting, and regression analysis to verify experimental results.
+
+The MAE measures the average magnitude of the errors in a set of forecasts, without considering their direction.
+It measures accuracy for continuous variables. The equation is given in the library references. Expressed in 
+words, the MAE is the average over the verification sample of the absolute values of the differences between 
+forecast and the corresponding observation. The MAE is a linear score which means that all the individual 
+differences are weighted equally in the average.
+
