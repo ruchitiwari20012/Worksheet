@@ -1,0 +1,106 @@
+Q1 :- B (As number of hidden layers increase, model capacity increases)
+
+Q2 :- C (It normalizes (changes) all the input before sending it to the next layer)
+
+Q3 :- B (Network will converge)
+
+Q4 :- D (All of these)
+
+Q5 :- C (-4, -4, 3)
+
+Q6 :- B (Simulate the network on a test dataset after every epoch of training. Stop training when the generalization
+ error starts to increase)
+
+Q7 :- B (Stochastic Gradient Descent)
+
+Q8 :- A (Freeze all the layers except the last, re-train the last layer)
+
+Q9 :- B,C (Training is too slow , Restrict activations to become too high or low)
+
+Q10:- B (sigmoid)
+
+Q11. What will happen if we do not use activation function in artificial neural networks?
+
+Activation functions are really important for a Artificial Neural Network to learn and make sense of something really complicated 
+and Non-linear complex functional mappings between the inputs and response variable.They introduce non-linear properties. Their 
+main purpose is to convert a input signal of a node in a A-NN to an output signal.
+
+If we do not apply a Activation function then the output signal would simply be a simple linear function.A linear function is just
+a polynomial of one degree. a linear equation is easy to solve but they are limited in their complexity and have less power to 
+learn complex functional mappings from data. A Neural Network without Activation function would simply be a Linear regression Model,
+which has limited power and does not perform good most of the times.
+
+
+Q12 How does forward propagation and backpropagation work in deep learning?
+
+Forward propagation is where you would give a certain input to your neural network, say an image or text. The network will calculate
+the output by propagating the input signal through its layers. In other words, the output form one layer becomes the input to the 
+next one, where the output from the last one is the “answer”.
+
+In order to do that accurately, the network needs to be trained. This is done through backpropagation. Basically, during training all
+the parameters of the network’s layers need to be updated (“optimized”). For this reason, the network needs to know in what “direction”
+the update should go thus it needs to calculate the so-called gradient with respect to a function known as the loss function, which is
+a way of saying how “wrong” or “incorrect” the network still is, so hopefully it becomes better next time. Since finding the gradients
+of all the parameters with respect to this loss function is a complex equation involving the so-called “chain rule”, in computation it 
+is being propagated, where every layer adds its own contribution to that gradient, starting from the last one (hence the name).
+
+
+Q13. Explain briefly the following variant of Gradient Descent: Stochastic, Batch, and Mini-batch?
+
+Stochastic Gradient Descent
+If our dataset is very huge. Deep learning models crave for data. The more the data the more chances of a model to be good. Suppose our
+dataset has 5 million examples, then just to take one step the model will have to calculate the gradients of all the 5 million examples.
+This does not seem an efficient way. To tackle this problem we have Stochastic Gradient Descent. In Stochastic Gradient Descent (SGD), 
+we consider just one example at a time to take a single step. We do the following steps in one epoch for SGD:
+1) Take an example
+2) Feed it to Neural Network
+3) Calculate it’s gradient
+4) Use the gradient we calculated in step 3 to update the weights
+5) Repeat steps 1–4 for all the examples in training dataset
+
+Since we are considering just one example at a time the cost will fluctuate over the training examples and it will not necessarily
+decrease. But in the long run, you will see the cost decreasing with fluctuations.Also because the cost is so fluctuating, it will
+never reach the minima but it will keep dancing around it.
+SGD can be used for larger datasets. It converges faster when the dataset is large as it causes updates to the parameters more 
+frequently.
+
+Batch Gradient Descent
+In Batch Gradient Descent, all the training data is taken into consideration to take a single step. We take the average of the 
+gradients of all the training examples and then use that mean gradient to update our parameters. So that’s just one step of 
+gradient descent in one epoch.
+Batch Gradient Descent is great for convex or relatively smooth error manifolds. In this case, we move somewhat directly towards an
+optimum solution.
+
+Mini Batch Gradient Descent
+We have seen the Batch Gradient Descent. We have also seen the Stochastic Gradient Descent. Batch Gradient Descent can be used for 
+smoother curves. SGD can be used when the dataset is large. Batch Gradient Descent converges directly to minima. SGD converges 
+faster for larger datasets. But, since in SGD we use only one example at a time, we cannot implement the vectorized implementation
+on it. This can slow down the computations. To tackle this problem, a mixture of Batch Gradient Descent and SGD is used.
+Neither we use all the dataset all at once nor we use the single example at a time. We use a batch of a fixed number of training 
+examples which is less than the actual dataset and call it a mini-batch. Doing this helps us achieve the advantages of both the 
+former variants we saw. So, after creating the mini-batches of fixed size, we do the following steps in one epoch:
+1) Pick a mini-batch
+2) Feed it to Neural Network
+3) Calculate the mean gradient of the mini-batch
+4) Use the mean gradient we calculated in step 3 to update the weights
+5) Repeat steps 1–4 for the mini-batches we created
+
+Just like SGD, the average cost over the epochs in mini-batch gradient descent fluctuates because we are averaging a small number
+of examples at a time.So, when we are using the mini-batch gradient descent we are updating our parameters frequently as well as 
+we can use vectorized implementation for faster computations.
+
+
+Q14 What are the main benefits of Mini-batch Gradient Descent?
+
+1) High throughput: With mini-batch one can process a large number of input examples per second. The mini batching style of gradient
+descent is perhaps the only way to use the large number of cores at once in a GPU.
+
+2) (Sometimes) faster convergence: The high througput may also translate to faster convergence depending on the variance in the 
+dataset and the learning rate used.
+
+3) High quality gradient: Mini batching allows for a high quality gradient and this will be really useful allowing one to use high
+learning rates.
+
+Q15. What is transfer learning?
+Transfer learning, is a research problem in machine learning that focuses on storing knowledge gained while solving one problem 
+and applying it to a different but related problem
