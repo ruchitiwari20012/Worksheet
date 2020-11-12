@@ -1,0 +1,19 @@
+Q1 :- B
+Q2 :- C
+Q3 :- B
+Q4 :- D
+Q5 :- B,C
+Q6 :- A
+Q7 :- D
+Q8 :- C
+Q9 :- B
+Q10:- D
+Q11:- D
+Q12:- A
+Q13:- C
+Q14:- B
+Q15:- What is the difference between find() and find_all() in Beautiful Soup?
+
+The find_all() method scans the entire document looking for results, but sometimes you only want to find one result. 
+If you know a document only has one <body> tag, it’s a waste of time to scan the entire document looking for more. 
+Rather than passing in limit=1 every time you call find_all, you can use the find() method
