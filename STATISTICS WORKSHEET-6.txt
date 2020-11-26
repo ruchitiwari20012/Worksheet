@@ -1,0 +1,25 @@
+1. B
+2. C
+3. A
+4. A
+5. B
+6. B
+7. B
+8. D
+9. A
+10.Bayes theorem is a way to figure out the  probability an event happening(Conditional probability), it has some relationship to one or more other events. For example our probability of getting seat in Metro is depend on where we are travelling and Time of travelling and other factors also like Weekday Weekend.
+
+11.
+The position of a score in terms of its distance from the mean when measured in standard deviation units is described by the Z- score. We represent Z-score in terms of standard deviations from their means. Z scores have a distribution with a mean as zero and a standard deviation as 1
+
+12.A t-test is used to find out if two sets of data are significantly different from each other. It compares the two sets of data and their means. You could use a t-test to determine if a difference in grades exists between children attending a private or public school. The t-test assumes the data follows a normal distribution and the variances of the two groups of data to be equal.
+
+13.In statistics, a percentile  is a type of quantile which divides the given probability distribution, or sample, into 100 equal-sized intervals; this allows the data to be analyzed in terms of percentages. For example, the 10th percentile is the value (or score) below which 10% of the observations are found, and above which 90% are found.
+
+14.Analysis of variance (ANOVA) is a statistical technique that is used to check if the means of two or more groups are significantly different from each other. ANOVA checks the impact of one or more factors by comparing the means of different samples.
+
+We can use ANOVA to prove/disprove if all the medication treatments were equally effective or not.
+
+15.ANOVA can help marketers understand how different groups respond.
+
+The one-way ANOVA can help you know whether or not there are significant differences between the means of your independent variables (such as the first example: age, sex, income). Like other types of tests, ANOVA compares the means of different groups and shows you if there are any statistical differences between the means. 
