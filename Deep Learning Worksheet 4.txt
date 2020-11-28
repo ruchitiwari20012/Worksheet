@@ -1,0 +1,98 @@
+Q1  :-B
+
+Q2  :-D
+
+Q3  :-C
+
+Q4  :-A
+
+Q5  :-A
+
+Q6  :-C
+
+Q7  :-B
+
+Q8  :-A
+
+Q9  :-A,B,D
+
+Q10 :-B,D
+
+Q11 :- What is Deep Learning?
+
+Deep learning is a machine learning technique that teaches computers to do what comes naturally to humans: learn by example.
+Deep learning is a key technology behind driverless cars, enabling them to recognize a stop sign, or to distinguish a pedestrian 
+from a lamppost. It is the key to voice control in consumer devices like phones, tablets, TVs, and hands-free speakers. Deep learning
+is getting lots of attention lately and for good reason. It’s achieving results that were not possible before.
+
+In deep learning, a computer model learns to perform classification tasks directly from images, text, or sound. Deep learning models 
+can achieve state-of-the-art accuracy, sometimes exceeding human-level performance. Models are trained by using a large set of labeled 
+data and neural network architectures that contain many layers.
+
+Q12 :- What is reinforcement learning?
+
+Reinforcement learning is an area of Machine Learning. It is about taking suitable action to maximize reward in a particular situation. 
+It is employed by various software and machines to find the best possible behavior or path it should take in a specific situation. 
+Reinforcement learning differs from the supervised learning in a way that in supervised learning the training data has the answer key
+with it so the model is trained with the correct answer itself whereas in reinforcement learning, there is no answer but the reinforcement
+agent decides what to do to perform the given task. In the absence of a training dataset, it is bound to learn from its experience.
+
+Q13 :-What Are the Differences Between Machine Learning and Deep Learning?
+
+              MACHINE LEARNING	                                                        DEEP LEARNING
+1.Machine Learning is a superset of Deep Learning	                 Deep Learning is a subset of Machine Learning
+
+2.The data represented in Machine Learning is quite                      The data representation is used in Deep Learning is quite 
+different as compared to Deep Learning as it uses structured data        different as it uses neural networks(ANN).
+	
+3.Machine Learning is an evolution of AI	                         Deep Learning is an evolution to Machine Learning.
+                                                                         Basically it is how deep is the machine learning.
+
+4.Machine learning consists of thousands of data points.	         Big Data: Millions of data points.
+
+5.Outputs: Numerical Value, like classification of score	         Anything from numerical values to free-form elements, 
+                                                                         such as free text and sound.
+
+6.Uses various types of automated algorithms that turn to model          Uses neural network that passes data through processing layers to the
+functions and predict future action from data.	                         interpret data features and relations.
+
+7.Algorithms are detected by data analysts to examine                    Algorithms are largely self-depicted on data analysis once
+specific variables in data sets.                                         they’re put into production. 
+          
+8.Machine Learning is highly used to stay in the competition             Deep Learning solves complex machine learning issues.
+and learn new things. 	
+
+
+Q14 :-What is a perceptron?
+
+A perceptron is a simple binary classification algorithm, proposed by Cornell scientist Frank Rosenblatt. It helps to divide a
+set of input signals into two parts—“yes” and “no”. But unlike many other classification algorithms, the perceptron was modeled
+after the essential unit of the human brain—the neuron and has an uncanny ability to learn and solve complex problems.
+
+A perceptronis a very simple learning machine. It can take in a few inputs, each of which has a weight to signify how important it is,and
+generate an output decision of “0” or “1”. However, when combined with many other perceptrons, it forms an artificial neural 
+network. A neural network can, theoretically, answer any question, given enough training data and computing power.
+
+
+Q15 :-What’s the difference between AI and ML?
+
+           ARTIFICIAL INTELLIGENCE	                                                      MACHINE LEARNING
+1) AI stands for Ar tificial intelligence, where intelligence             ML stands for Machine Learning which is defined as the acquisition of knowledge or skill
+is defined acquisition of knowledge intelligence is defined
+as a ability to acquire and apply knowledge.	
+
+2) The aim is to increase chance of success and not accuracy.             The aim is to increase accuracy, but it does not care about success
+
+3) It work as a computer program that does smart work	                  It is a simple concept machine takes data and learn from data.
+
+4) The goal is to simulate natural intelligence to solve                  The goal is to learn from data on certain task to maximize the
+complex problem                                                           performance of machine on this task.
+	 
+5) AI is decision making.	                                          ML allows system to learn new things from data.
+
+6) It leads to develop a system to mimic human to respond 	          It involves in creating self learning algorithms.
+behave in a circumstances.
+
+7) AI will go for finding the optimal solution.	                          ML will go for only solution for that whether it is optimal or not.
+
+8) AI leads to intelligence or wisdom.	                                  ML leads to knowledge.
