@@ -1,0 +1,27 @@
+Q1 :-C
+
+Q2 :-D
+
+Q3 :-B
+
+Q4 :-D
+
+Q5 :-C
+
+Q6 :-D
+
+Q7 :-B
+
+Q8 :-C
+
+Q9 :-D
+
+Q10:-A,B
+
+11. List any two major differences between lists and sets in python.
+
+1) List is Ordered collection of item and set is Unordered collection of items.
+2) Items in list can be replaced or changed and in set cannot be changed or replaced.
+
+
+
