@@ -1,0 +1,86 @@
+1. SELECT * FROM movie;
+
+2. SELECT title FROM movie WHERE runtime =(SELECT MAX(runtime) AS runtime FROM movie);
+
+3.SELECT title FROM movie WHERE revenue =(SELECT MAX(revenue) AS runtime FROM movie);
+
+4. SELECT title FROM movie WHERE movie_id = (SELECT TOP 1 movie_id ,(revenue / budget ) AS 'Result' FROM movie ORDER BY Result DESC);
+
+5.SELECT A.title ,
+	  B.character_name,
+	  B.cast_order,
+	  C.gender,
+	  D.person_name
+	  FROM movies AS A
+	  INNER JOIN movie_cast AS B
+	  ON A.movie_id = B.movie_id
+	  INNER JOIN gender AS C
+	  ON B.gender_id = C.gender_id
+	  INNER JOIN person AS D
+	  ON B.person_id = D.person_id;
+
+6.
+
+SELECT TOP 1 
+	A.country_name
+	B.movie_count
+	FROM country AS A
+	INNER JOIN
+	(
+	SELECT country_id,
+		COUNT(movie_id) AS 'movie_count'
+		FROM production_country
+		GROUP BY country_id ) AS B
+		ON A.country_id = B.country_id
+		ORDER BY B.movie_count DESC;
+
+7. SELECT genre_id,genre_name FROM genre;
+
+8. SELECT 
+	A.language_name,
+	B.movie_count
+	FROM language AS A
+	INNER JOIN ( SELECT language_id,
+				COUNT(movie_id) AS 'movie_count'
+				from movie_language
+				GROUP BY language_id ) AS B
+	ON A.language_id = B.language_id;
+
+9. SELECT A.title,
+	  B.Total_cast,
+	  C.Total_crew
+	  FROM movie AS A
+	  INNER JOIN ( SELECT movie_id , 
+			      COUNT(person_id) AS Total_cast
+		       FROM movie_cast
+		       GROUP BY movie_id ) AS B
+	  ON A.movie_id = B.movie_id
+	  INNER JOIN ( SELECT movie_id,
+			      COUNT(person_id) AS Total_crew
+			      FROM movie_crew
+			      GROUP BY movie_id) AS C
+	  ON A.movie_id = C.movie_id;
+
+10. SELECT TOP 10 title FROM movie ORDER BY popularity DESC;
+
+11. SELECT  TOP 1 title , revenue FROM movie WHERE movie_id = ( SELECT TOP 3 movie_id , revenue FROM movie ORDER BY revenue  DESC) ORDER BY revenue ASC;  
+
+**Note Select TOP 3 will give first 3 record in DESC order and we will pass this to Other SQL in ASC order and TOP 1 will give Over ALL 3rd most revenue 
+
+12.SELECT title FROM movie WHERE movie_status = "rumoured";
+
+13 SELECT TOP 1 A.title FROM movie AS A 
+			INNER JOIN production_country 
+			AS B ON (A.movie_id = B.movie_id)
+			WHERE B.country_id = (
+			SELECT country_id FROM country 
+			WHERE country_name = 'United States of America' )
+			ORDER BY A.revenue DESC;
+
+14. SELECT A.title,C.company_name FROM movie AS A
+				  INNER JOIN movie_company AS B
+				  ON A.movie_id = B.movie_id
+				  INNER JOIN production_company AS C
+				  ON B.company_id = C.company_id;
+
+15 SELECT TOP 20 title FROM movie ORDER BY budget DESC; 
