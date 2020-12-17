@@ -1,98 +1,72 @@
-Q1  :-B
+Q1 :-A
 
-Q2  :-D
+Q2 :-B
 
-Q3  :-C
+Q3 :-B
 
-Q4  :-A
+Q4 :-B
 
-Q5  :-A
+Q5 :-A
 
-Q6  :-C
+Q6 :-D
 
-Q7  :-B
+Q7 :-B
 
-Q8  :-A
+Q8 :-D
 
-Q9  :-A,B,D
+Q9 :-B,D
 
-Q10 :-B,D
+Q10:-A,B,C
 
-Q11 :- What is Deep Learning?
+Q11 :- Describe the basic architecture of a CNN?
 
-Deep learning is a machine learning technique that teaches computers to do what comes naturally to humans: learn by example.
-Deep learning is a key technology behind driverless cars, enabling them to recognize a stop sign, or to distinguish a pedestrian 
-from a lamppost. It is the key to voice control in consumer devices like phones, tablets, TVs, and hands-free speakers. Deep learning
-is getting lots of attention lately and for good reason. It’s achieving results that were not possible before.
+Convolutional Neural Networks are quite different from most other networks.They are primarily used for image processing but
+can also be used for other types of input such as audio.A typical use case for CNNs is where you feed the network images and
+the network classifies the data. CNNs tend to start with an input “scanner” which is not intended to parse all the training
+data at once. For example, to input an image of 100 x 100 pixels, you wouldn’t want a layer with 10 000 nodes.Rather, you
+create a scanning input layer of say 10 x 10 which you feed the first 10 x 10 pixels of the image.Once you passed that input,
+you feed it the next 10 x 10 pixels by moving the scanner one pixel to the right.
 
-In deep learning, a computer model learns to perform classification tasks directly from images, text, or sound. Deep learning models 
-can achieve state-of-the-art accuracy, sometimes exceeding human-level performance. Models are trained by using a large set of labeled 
-data and neural network architectures that contain many layers.
-
-Q12 :- What is reinforcement learning?
-
-Reinforcement learning is an area of Machine Learning. It is about taking suitable action to maximize reward in a particular situation. 
-It is employed by various software and machines to find the best possible behavior or path it should take in a specific situation. 
-Reinforcement learning differs from the supervised learning in a way that in supervised learning the training data has the answer key
-with it so the model is trained with the correct answer itself whereas in reinforcement learning, there is no answer but the reinforcement
-agent decides what to do to perform the given task. In the absence of a training dataset, it is bound to learn from its experience.
-
-Q13 :-What Are the Differences Between Machine Learning and Deep Learning?
-
-              MACHINE LEARNING	                                                        DEEP LEARNING
-1.Machine Learning is a superset of Deep Learning	                 Deep Learning is a subset of Machine Learning
-
-2.The data represented in Machine Learning is quite                      The data representation is used in Deep Learning is quite 
-different as compared to Deep Learning as it uses structured data        different as it uses neural networks(ANN).
-	
-3.Machine Learning is an evolution of AI	                         Deep Learning is an evolution to Machine Learning.
-                                                                         Basically it is how deep is the machine learning.
-
-4.Machine learning consists of thousands of data points.	         Big Data: Millions of data points.
-
-5.Outputs: Numerical Value, like classification of score	         Anything from numerical values to free-form elements, 
-                                                                         such as free text and sound.
-
-6.Uses various types of automated algorithms that turn to model          Uses neural network that passes data through processing layers to the
-functions and predict future action from data.	                         interpret data features and relations.
-
-7.Algorithms are detected by data analysts to examine                    Algorithms are largely self-depicted on data analysis once
-specific variables in data sets.                                         they’re put into production. 
-          
-8.Machine Learning is highly used to stay in the competition             Deep Learning solves complex machine learning issues.
-and learn new things. 	
+This input data is then fed through convolutional layers instead of normal layers, where not all nodes are connected to all nodes.
+Each node only concerns itself with close neighboring cells. These convolutional layers also tend to shrink as they become deeper,
+mostly by easily divisible factors of the input. Besides these convolutional layers, they also often feature pooling layers.Pooling
+is a way to filter out details: a commonly found pooling technique is max pooling, where we take say 2 x 2 pixels and pass on the 
+pixel with the most amount of red.
 
 
-Q14 :-What is a perceptron?
+Q12 :- What is convolution in CNN? What is the role of convolution in image processing?
 
-A perceptron is a simple binary classification algorithm, proposed by Cornell scientist Frank Rosenblatt. It helps to divide a
-set of input signals into two parts—“yes” and “no”. But unlike many other classification algorithms, the perceptron was modeled
-after the essential unit of the human brain—the neuron and has an uncanny ability to learn and solve complex problems.
+Convolution is an integral transformation operation on a function through a specific operator. It reforms the original function 
+into a new representation of the similarity of two functions in a certain window. It is widely used in image processing for feature 
+detecting without cancelling the spatial associations between pixels. It searches for a certain feature with the help of corresponding
+operator in a much larger pixel set.
 
-A perceptronis a very simple learning machine. It can take in a few inputs, each of which has a weight to signify how important it is,and
-generate an output decision of “0” or “1”. However, when combined with many other perceptrons, it forms an artificial neural 
-network. A neural network can, theoretically, answer any question, given enough training data and computing power.
+In image processing, convolution is an efficient way of feature extraction, skilled in reducing data dimension and producing a less
+redundant data set, also called as a feature map. Each kernel works as a feature identifier,filtering out where the feature exists 
+in the original image. Eventually it produces a map whose altitude reveals how these features distribute. Since directly analyzed
+original data ask for a great amount of preprocessing such as image segmentation, and can hardly deconstruct the symbolic information
+of the images, it is necessary that images are processed with some certain general feature describing methods like convolution. It 
+aims to extract target features automatically and to make them more ‘visible’ for computers. Operating convolutions not only fully 
+describe the characteristics of the input, but also does it lower the demand for manual operations.
 
+Q13 :- What is the difference between Max Pooling and Average Pooling? Explain briefly.
 
-Q15 :-What’s the difference between AI and ML?
+The Average Pooling is used for to calculate the average value for each patch on the feature map.Whereas Max Pooling is used for 
+to calculate the maximum values for each patch of the feature map.
 
-           ARTIFICIAL INTELLIGENCE	                                                      MACHINE LEARNING
-1) AI stands for Ar tificial intelligence, where intelligence             ML stands for Machine Learning which is defined as the acquisition of knowledge or skill
-is defined acquisition of knowledge intelligence is defined
-as a ability to acquire and apply knowledge.	
+Q14 :- What is Padding? Why is it used?
 
-2) The aim is to increase chance of success and not accuracy.             The aim is to increase accuracy, but it does not care about success
+Padding is a term relevant to convolutional neural networks as it refers to the amount of pixels added to an image when it is being 
+processed by the kernel of a CNN.
 
-3) It work as a computer program that does smart work	                  It is a simple concept machine takes data and learn from data.
+padding will be useful for us to extract the features in the corners of the image. during the convolution process the corner pixels
+of the image will be part of just a single filter on the other hand pixels in the other part of the image will have some filter 
+overlap and ensure better feature detection, to avoid this issue we can add a layer around the image with 0 pixel value and increase
+the possibility of feature extraction in the corners also.This padding will also help us to keep the size of the image same even after
+the convolution operation.
 
-4) The goal is to simulate natural intelligence to solve                  The goal is to learn from data on certain task to maximize the
-complex problem                                                           performance of machine on this task.
-	 
-5) AI is decision making.	                                          ML allows system to learn new things from data.
+Q15 :- Describe the layers used in classification part of a CNN?
 
-6) It leads to develop a system to mimic human to respond 	          It involves in creating self learning algorithms.
-behave in a circumstances.
-
-7) AI will go for finding the optimal solution.	                          ML will go for only solution for that whether it is optimal or not.
-
-8) AI leads to intelligence or wisdom.	                                  ML leads to knowledge.
+There are three types of layers in a convolutional neural network: convolutional layer, pooling layer, and fully connected 
+layer. Fully connected layers are placed before the classification output of a CNN and are used to flatten the results before 
+classification. This is similar to the output layer of an MLP.
