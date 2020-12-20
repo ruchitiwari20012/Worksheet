@@ -1,0 +1,66 @@
+Q1 :-B
+
+Q2 :-D
+
+Q3 :-D
+
+Q4 :-C
+
+Q5 :-B
+
+Q6 :-A
+
+Q7 :-B
+
+Q8 :-C
+
+Q9 :-A,B,C
+
+Q10:-B,C,D
+
+Q11:-A,B,D
+
+Q12:- Explain R2 and adjusted R2 metrics?
+
+R-Squared (R² or the coefficient of determination) is a statistical measure in a regression model that determines the
+proportion of variance in the dependent variable that can be explained by the independent variable. In other words, 
+r-squared shows how well the data fit the regression model (the goodness of fit).
+
+R-squared can take any values between 0 to 1. Although the statistical measure provides some useful insights regarding
+the regression model, the user should not rely only on the measure in the assessment of a statistical model.The figure
+does not disclose information about the causation relationship between the independent and dependent variables.
+
+The adjusted R-squared is a modified version of R-squared that has been adjusted for the number of predictors in the model.
+The adjusted R-squared increases only if the new term improves the model more than would be expected by chance.It decreases 
+when a predictor improves the model by less than expected by chance.
+
+Q13:- Explain the cost function of linear regression?
+
+A cost function is a measure of how wrong the model is in terms of its ability to estimate the relationship between X and y.
+This is typically expressed as a difference or distance between the predicted value and the actual value.The cost function 
+(you may also see this referred to as loss or error.)
+
+Q14:- Differentiate SSE, SSR and SST.
+
+The sum of squares error, or SSE. The error is the difference between the observed value and the predicted value.
+We usually want to minimize the error. The smaller the error, the better the estimation power of the regression.
+ 
+The sum of squares total, denoted SST, is the squared differences between the observed dependent variable and its mean. 
+this is the dispersion of the observed variables around the mean – much like the variance in descriptive statistics.
+It is a measure of the total variability of the dataset.
+
+The second term is the sum of squares due to regression, or SSR.It is the sum of the differences between the predicted value
+and the mean of the dependent variable.Think of it as a measure that describes how well our line fits the data.
+If this value of SSR is equal to the sum of squares total, it means our regression model captures all the observed variability
+and is perfect.
+
+Q15:- What are the various evaluation metrics for linear regression?
+
+Regression analysis is a subfield of supervised machine learning.It aims to model the relationship between a certain number of 
+features and a continuous target variable. Following are the performance metrics used for evaluating a regression model:
+
+Mean Absolute Error (MAE)
+Mean Squared Error (MSE)
+Root Mean Squared Error (RMSE)
+R-Squared
+Adjusted R-squared
